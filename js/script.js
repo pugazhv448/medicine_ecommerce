@@ -77,6 +77,31 @@ if(mobileMenuBtn && navLinksContainer) {
     });
 }
 
+// Mobile DOM Repositioning for Theme and Login
+function handleMobileNav() {
+    const navLinks = document.getElementById('nav-links');
+    const themeToggle = document.getElementById('theme-toggle');
+    const loginLink = document.getElementById('login-link');
+    const navIcons = document.querySelector('.nav-icons');
+
+    if (!navLinks || !themeToggle || !loginLink || !navIcons) return;
+
+    if (window.innerWidth <= 768) {
+        if (themeToggle.parentElement === navIcons) {
+            navLinks.appendChild(themeToggle);
+            navLinks.appendChild(loginLink);
+        }
+    } else {
+        if (themeToggle.parentElement === navLinks) {
+            navIcons.insertBefore(themeToggle, navIcons.firstChild);
+            navIcons.insertBefore(loginLink, navIcons.children[1]);
+        }
+    }
+}
+
+window.addEventListener('resize', handleMobileNav);
+document.addEventListener('DOMContentLoaded', handleMobileNav);
+
 // Cart Functionality
 function updateCartCount() {
     const countElements = document.querySelectorAll('.cart-count');
