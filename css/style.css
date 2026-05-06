@@ -508,28 +508,6 @@ footer {
     100% { transform: rotate(360deg); }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .hero-content {
-        max-width: 100%;
-        margin-bottom: 2rem;
-    }
-    
-    .product-detail-container, .cart-container, .checkout-container {
-        flex-direction: column;
-    }
-}
-
 /* Drone Tracking */
 .tracking-container { max-width: 800px; margin: 2rem auto; background-color: var(--card-bg); padding: 3rem; border-radius: 12px; box-shadow: var(--shadow); }
 .tracking-status { display: flex; justify-content: space-between; position: relative; margin-bottom: 3rem; margin-top: 2rem; }
@@ -539,7 +517,91 @@ footer {
 .tracking-step.active .step-icon { border-color: var(--primary-color); color: var(--primary-color); }
 .tracking-step.completed .step-icon { background-color: var(--primary-color); border-color: var(--primary-color); color: white; }
 .tracking-step p { font-weight: 600; font-size: 0.9rem; }
+
 /* About & Drone Features */
 .feature-box { text-align: center; padding: 2rem; background: var(--card-bg); border-radius: 12px; border: 1px solid var(--border-color); transition: var(--transition); }
 .feature-box:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
 .feature-icon { font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+    
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .product-detail-container, .cart-container, .checkout-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .cart-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .cart-item-info {
+        margin-left: 0;
+    }
+    
+    .tracking-container {
+        padding: 1.5rem;
+    }
+    
+    .tracking-status {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    
+    .tracking-status::before {
+        top: 0;
+        bottom: 0;
+        left: 24px;
+        width: 4px;
+        height: auto;
+    }
+    
+    .tracking-step {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .step-icon {
+        margin: 0 1rem 0 0;
+        min-width: 50px;
+    }
+    
+    .search-input, .category-select {
+        width: 100%;
+    }
+}
