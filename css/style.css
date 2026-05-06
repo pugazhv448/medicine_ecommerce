@@ -539,8 +539,8 @@ footer {
     
     .menu-toggle {
         display: block;
-        order: 2;
-        margin-left: 1rem;
+        order: 1;
+        margin-left: auto;
     }
     
     .logo {
@@ -548,7 +548,10 @@ footer {
     }
     
     .nav-icons {
-        order: 1;
+        order: 2;
+        flex-basis: 100%;
+        justify-content: center;
+        margin-top: 1rem;
     }
     
     .nav-links {
