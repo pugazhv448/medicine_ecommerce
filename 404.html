@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - MediQuick</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <i class="fas fa-notes-medical"></i> MediQuick
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Medicines</a>
+            <a href="about.html">About Drones</a>
+            <a href="track.html">Track Order</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="nav-icons">
+            <div id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></div>
+            <div id="login-link"></div>
+            <a href="cart.html" class="cart-icon-container">
+                <i class="fas fa-shopping-cart" style="font-size: 1.5rem;"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container" style="text-align: center; max-width: 600px; padding: 6rem 2rem;">
+        <i class="fas fa-exclamation-triangle" style="font-size: 5rem; color: var(--danger-color); margin-bottom: 1.5rem;"></i>
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">404</h1>
+        <p style="font-size: 1.2rem; color: var(--text-light); margin-bottom: 2rem;">Oops! The page you are looking for does not exist.</p>
+        <a href="index.html" class="btn btn-primary" style="padding: 1rem 2rem;">Return to Home</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 MediQuick Drone Delivery. All rights reserved.</p>
+    </footer>
+
+    <div id="toast-container"></div>
+    <div id="spinner-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
