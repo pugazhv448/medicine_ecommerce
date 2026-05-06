@@ -59,6 +59,24 @@ if(themeToggleBtn) {
     themeToggleBtn.addEventListener('click', toggleTheme);
 }
 
+// Mobile Menu Management
+const mobileMenuBtn = document.getElementById('mobile-menu');
+const navLinksContainer = document.getElementById('nav-links');
+
+if(mobileMenuBtn && navLinksContainer) {
+    mobileMenuBtn.addEventListener('click', () => {
+        navLinksContainer.classList.toggle('active');
+        const icon = mobileMenuBtn.querySelector('i');
+        if(navLinksContainer.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+}
+
 // Cart Functionality
 function updateCartCount() {
     const countElements = document.querySelectorAll('.cart-count');
